@@ -8,6 +8,12 @@ This project was created for [freeCodeCamp](https://www.freecodecamp.org/), as p
 
 Date of completion: 9th February 2023.
 
+## Change Log (dd/mm/yy)
+
+### 09/02/2023
+
+Repository created and first commit.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
