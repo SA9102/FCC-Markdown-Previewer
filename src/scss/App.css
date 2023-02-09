@@ -1,0 +1,165 @@
+/*
+Code to ensure that the 'preview' flex item does not overflow:
+Pawel (https://stackoverflow.com/questions/27784727/how-to-make-child-div-scrollable-when-it-exceeds-parent-height)
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+#page-container {
+  background-color: #212529;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+#page-container #title,
+#page-container #copyright {
+  color: #e6e6e6;
+  align-self: center;
+}
+#page-container #copyright {
+  font-size: 0.8rem;
+}
+#page-container #button-panel {
+  display: flex;
+  gap: 1rem;
+  padding-left: 3rem;
+}
+@media (max-width: 900px) {
+  #page-container #button-panel {
+    justify-content: center;
+    padding: 0;
+  }
+}
+@media (max-width: 475px) {
+  #page-container #button-panel {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+#page-container #button-panel button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  padding: 0.3rem 0.6rem;
+  background-color: #ffaa69;
+  border: none;
+  border-radius: 0.3rem;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  box-shadow: 0px 1px 3px -1px #212529;
+}
+#page-container #button-panel button:disabled {
+  background-color: #ffd0ac;
+}
+#page-container #button-panel button:enabled:hover {
+  cursor: pointer;
+  background-color: #ffb883;
+}
+#page-container #editor-container {
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+  padding: 1rem 3rem;
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  #page-container #editor-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  #page-container #editor-container {
+    padding: 1rem;
+  }
+}
+#page-container #editor-container #editor {
+  color: #e6e6e6;
+  padding: 1.2rem;
+  flex: 1 1 0;
+  font-family: Monospace, "Courier New", Courier;
+  background-color: #343a40;
+  border: none;
+  resize: none;
+  height: 100%;
+  box-shadow: 0px 1px 3px -1px #212529;
+}
+#page-container #editor-container #editor:focus {
+  outline: none;
+}
+#page-container #editor-container #preview {
+  color: #212529;
+  padding: 1.2rem;
+  flex: 1 1 0;
+  background-color: #e6e6e6;
+  height: 100%;
+  width: 100%;
+  align-self: flex-start;
+  overflow: auto;
+  box-shadow: 0px 1px 3px -1px #212529;
+}
+#page-container #editor-container #preview pre {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background-color: #d5d5d5;
+}
+#page-container #editor-container #preview table,
+#page-container #editor-container #preview th,
+#page-container #editor-container #preview td {
+  border: 3px solid #212529;
+  border-collapse: collapse;
+}
+#page-container #editor-container #preview th,
+#page-container #editor-container #preview td {
+  padding: 0.5rem;
+}
+#page-container #editor-container #preview img {
+  padding: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+#page-container #editor-container .left {
+  border-bottom-left-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+@media (max-width: 900px) {
+  #page-container #editor-container .left {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0.8rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0.8rem;
+  }
+}
+#page-container #editor-container .right {
+  border-bottom-right-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+@media (max-width: 900px) {
+  #page-container #editor-container .right {
+    border-bottom-left-radius: 0.8rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0.8rem;
+    border-top-right-radius: 0;
+  }
+}
+#page-container #editor-container .only {
+  border-radius: 0.8rem;
+}/*# sourceMappingURL=App.css.map */
