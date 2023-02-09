@@ -27,11 +27,19 @@ body {
   flex-flow: column;
 }
 #page-container #title,
-#page-container #copyright {
+#page-container #copyright,
+#page-container #view-repository {
   color: #e6e6e6;
   align-self: center;
 }
-#page-container #copyright {
+#page-container #view-repository {
+  margin-top: -0.5rem;
+}
+#page-container #view-repository a {
+  color: #e6e6e6;
+}
+#page-container #copyright,
+#page-container #view-repository {
   font-size: 0.8rem;
 }
 #page-container #button-panel {

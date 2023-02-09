@@ -58,6 +58,14 @@ export default function App() {
   return (
     <div id="page-container">
       <h1 id="title">Markdown Previewer</h1>
+      <p id="view-repository">
+        <a
+          href="https://github.com/SA9102/FCC-Markdown-Previewer/"
+          target="_blank"
+        >
+          View Repository
+        </a>
+      </p>
       <div id="button-panel">
         <button onClick={handleSwitchPanels} disabled={view !== views[0]}>
           Switch Panels

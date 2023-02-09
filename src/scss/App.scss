@@ -30,12 +30,22 @@ body {
   flex-flow: column;
 
   #title,
-  #copyright {
+  #copyright,
+  #view-repository {
     color: $light-1;
     align-self: center;
   }
 
-  #copyright {
+  #view-repository {
+    margin-top: -0.5rem;
+  }
+
+  #view-repository a {
+    color: $light-1;
+  }
+
+  #copyright,
+  #view-repository {
     font-size: 0.8rem;
   }
 
